@@ -1,0 +1,23 @@
+<Project>
+    <Target Name="AfterPack" AfterTargets="Pack">
+        <!-- Copy the full output file structure into the root .build/Release dir -->
+        <ItemGroup>
+            <Binaries Include="bin/$(Configuration)/**/$(MSBuildProjectName).*" />
+        </ItemGroup>
+        <Copy SourceFiles="@(Binaries)"
+              DestinationFolder="$(MSBuildProjectDirectory)/../../.build/$(Configuration)/$(MSBuildProjectName)/%(RecursiveDir)"
+              Condition="'$(IsPackable)'!='false'" />
+        <!-- Error handling for file copy -->
+        <OnError ExecuteTargets="HandleCopyError" />
+    </Target>
+
+    <!-- Error handling target -->
+    <Target Name="HandleCopyError">
+        <Message Text="Warning: One or more files failed to copy during the AfterPack target." Importance="high" />
+    </Target>
+
+    <!-- Clean target removes the bin/ and obj/ directories -->
+    <Target Name="AfterClean">
+        <RemoveDir Directories="$(BaseIntermediateOutputPath);$(BaseOutputPath)" />
+    </Target>
+</Project>

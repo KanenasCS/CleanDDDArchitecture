@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>CleanDDDArchitecture.Domains.Account.Infrastructure</RootNamespace>
+        <AssemblyName>CleanDDDArchitecture.Domains.Account.Infrastructure</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Persistence\Migrations" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove=".gitignore" />
+        <None Remove="Persistence\Migrations\.gitkeep" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Library\Aviant\src\Identity\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\..\..\Library\Aviant\src\EventSourcing\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\..\..\Library\Aviant\src\Persistence\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\..\Shared\Infrastructure\Infrastructure.csproj" />
+      <ProjectReference Include="..\Application\Application.csproj" />
+    </ItemGroup>
+
+</Project>

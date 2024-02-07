@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>CleanDDDArchitecture.Hosts.RestApi.Tests.Behaviour</RootNamespace>
+        <AssemblyName>CleanDDDArchitecture.Hosts.RestApi.Tests.Behaviour</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Presentation\Presentation.csproj" />
+    </ItemGroup>
+
+</Project>

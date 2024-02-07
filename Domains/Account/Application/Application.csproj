@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>CleanDDDArchitecture.Domains.Account.Application</RootNamespace>
+        <AssemblyName>CleanDDDArchitecture.Domains.Account.Application</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Library\Aviant\src\EventSourcing\Application\Application.csproj" />
+      <ProjectReference Include="..\..\..\Library\Aviant\src\Identity\Application\Application.csproj" />
+      <ProjectReference Include="..\..\..\Library\Aviant\src\Persistence\Application\Application.csproj" />
+      <ProjectReference Include="..\..\Shared\Application\Application.csproj" />
+      <ProjectReference Include="..\Core\Core.csproj" />
+    </ItemGroup>
+
+</Project>

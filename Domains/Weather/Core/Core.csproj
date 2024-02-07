@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>CleanDDDArchitecture.Domains.Weather.Core</RootNamespace>
+        <AssemblyName>CleanDDDArchitecture.Domains.Weather.Core</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\Shared\Core\Core.csproj" />
+    </ItemGroup>
+
+</Project>

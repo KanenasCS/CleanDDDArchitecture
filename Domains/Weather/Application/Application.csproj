@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>CleanDDDArchitecture.Domains.Weather.Application</RootNamespace>
+        <AssemblyName>CleanDDDArchitecture.Domains.Weather.Application</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Library\Aviant\src\Jobs\Application\Application.csproj" />
+        <ProjectReference Include="..\..\Shared\Application\Application.csproj" />
+        <ProjectReference Include="..\Core\Core.csproj" />
+    </ItemGroup>
+</Project>
