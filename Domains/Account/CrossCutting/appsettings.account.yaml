@@ -1,0 +1,19 @@
+---
+eventsTopicName: "CleanDDDArchitectureEvents"
+eventsTopicGroupName: "cleandddarchitecture-api-events-consumer"
+
+Jwt:
+  Audience: "CleanDDDArchitecture.Hosts.RestApi.PresentationAPI"
+  ClockSkewInMinutes: 5
+  Access:
+    ExpirationDurationInMinutes: 15
+  Refresh:
+    ExpirationDurationInMinutes: 10080 # 7 days
+
+FeatureManagement:
+  AccountCreate: true
+  AccountAuthentication: true
+  AccountConfirmEmail: true
+  AccountGetBy: true
+  AccountProfile: true
+  AccountUpdateDetails: true

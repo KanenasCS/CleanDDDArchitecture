@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>CleanDDDArchitecture.Hosts.RestApi.Core</RootNamespace>
+        <AssemblyName>CleanDDDArchitecture.Hosts.RestApi.Core</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.1.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.1.0" />
+        <PackageReference Include="Microsoft.FeatureManagement.AspNetCore" Version="3.1.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Library\Aviant\src\Kernel\Application\Application.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Resources\ProgramStrings.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>ProgramStrings.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Resources\ProgramStrings.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>ProgramStrings.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+</Project>

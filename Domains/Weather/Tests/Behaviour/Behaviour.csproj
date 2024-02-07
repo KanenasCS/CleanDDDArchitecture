@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <RootNamespace>CleanDDDArchitecture.Domains.Weather.Tests.Behaviour</RootNamespace>
+        <AssemblyName>CleanDDDArchitecture.Domains.Weather.Tests.Behaviour</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\CrossCutting\CrossCutting.csproj" />
+    </ItemGroup>
+
+</Project>
